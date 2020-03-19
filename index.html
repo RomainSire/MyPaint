@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS Vendor -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
+		<!-- CSS Perso -->
+		<link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+		<title>MyPaint</title>
+	</head>
+	<body>
+
+		<!--HEADER-->
+		<header>
+			<h1><i class="fas fa-paint-brush"></i> MyPaint</h1>
+		</header>
+
+		<!--MAIN CONTENT-->
+		<main>
+			<canvas id="ardoise" width="600" height="500"></canvas>
+
+			<hr>
+			<div class="wrap spacebetween">
+				<nav class="toolbar">
+					<div class="wrap">
+						<p>Outils</p>
+						<button type="button" class="button btn-color-js" data-color="#000"><i class="fas fa-paint-brush"></i></button>
+						<button type="button" class="button btn-color-js" data-color="#fff"><i class="fas fa-eraser"></i></button>
+						<button type="button" id="reset" class="button red">Reset</button>
+					</div>
+					<div class="wrap">
+						<p>Couleur</p>
+						<button type="button" data-color="#000" class="button-color btn-color-js"></button>
+						<button type="button" data-color="#5C2121" class="button-color btn-color-js"></button>
+						<button type="button" data-color="#B9121B" class="button-color btn-color-js"></button>
+						<button type="button" data-color="#FFBD07" class="button-color btn-color-js"></button>
+						<button type="button" data-color="#13B813" class="button-color btn-color-js"></button>
+						<button type="button" data-color="#029E9A" class="button-color btn-color-js"></button>
+						<button type="button" data-color="#0378A6" class="button-color btn-color-js"></button>
+						<button type="button" id="colorPick" class="button"><i class="fas fa-eye-dropper"></i></button>
+					</div>
+					<div class="wrap">
+						<p>Epaisseur</p>
+						<button type="button" data-thickness="2" class="button btn-thickness-js"><i class="fas fa-circle"></i></button>
+						<button type="button" data-thickness="5" class="button btn-thickness-js"><i class="fas fa-circle"></i></button>
+						<button type="button" data-thickness="15" class="button btn-thickness-js"><i class="fas fa-circle"></i></button>
+						<button type="button" data-thickness="50" class="button btn-thickness-js"><i class="fas fa-circle"></i></button>
+					</div>
+				</nav>
+				<canvas id="colorPalette" width="150" height="200" class="hidden"></canvas>
+			</div>
+		</main>
+
+		<!-- Chargement de jQuery -->
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<!-- Chargement du script perso -->
+		<script src="js/Slate.class.js"></script>
+		<script src="js/Palette.class.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
